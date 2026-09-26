@@ -8,6 +8,7 @@ on:
 jobs:
     full-test:
         container: cuaesd/aesd-autotest:24-assignment4-buildroot
+            options: '--user 1001' # Match the UID of your host's non-root runner user
         runs-on: self-hosted
         timeout-minutes: 120
         steps:
